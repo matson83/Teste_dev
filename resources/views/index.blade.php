@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Aurora</title>
+    <title>Eletro App</title>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
           <ul class="navbar-nav mr-auto">
 
             <li class="nav-item">
-              <a class="nav-link" href="api/app/create">Adicionar Eletro</a>
+              <a class="nav-link" href="{{route('create')}}">Adicionar Eletrodomésticos</a>
             </li>
 
           </ul>
@@ -30,20 +30,23 @@
         </div>
       </nav>
 
-
+        <br>
     <div id="lista-container" class="col-md-12">
-        <h3>Segue os Dados Salvos</h3>
-        <p>Esses dados estão salvos em sequencia</p>
+        <h3 class="text-center">Segue os Eletrodomésticos Salvos</h3>
+        <p class="text-center">Esses eletrodomésticos estão salvos em sequencia</p>
 
         <div id="cards-container" class="row">
             @foreach ($eletros as $eletro )
                 <div class="card-col-md-3">
-                    <img width="100px" height="100px" src="" alt="{{$eletro->name}}">
+
+                    <img class="imgEletro" src="/img/eletros/{{$eletro->image}}" alt="{{$eletro->name}}">
                     <div class="card-body">
+                        <h4 class="card-name">{{$eletro->name}}</h4>
                         <h4 class="card-name">{{$eletro->description}}</h4>
                         <h5 class="card-description">{{$eletro->tensaov}}</h5>
                         <h5 class="card-description">{{$eletro->marca}}</h5>
 
+                        <a href="/api/app/show/{{ $eletro->id}}" class="btn btn-primary bg-dark">Saber Mais</a>
 
                     </div>
                 </div>

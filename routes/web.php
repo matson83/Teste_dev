@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EletroController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,3 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [EletroController::class,'index'])->name('index');

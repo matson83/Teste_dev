@@ -32,21 +32,24 @@
                         <form action="/api/app/store" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3 container">
-                                <label class="form-label" for="user_id">Nome do Eletrodomestico:</label>
+                                <label class="form-label" for="name">Nome do Eletrodomestico:</label>
                                 <input class="form-control" type="text" name="name" id="name" required>
 
-                                <label class="form-label" for="titulo">Descrição:</label>
+                                <label class="form-label" for="descrition">Descrição:</label>
                                 <input class="form-control" name="description" id="description" cols="15" rows="10" required>
+                                <br>
 
-
-
+                                <label class="form-label" for="image">Imagem:</label>
+                                <input class="form-control-file" type="file" name="image" id="image">
+                                <br>
+                                
 
                                 <br>
-                                <label class="form-label" for="regulation">Tensão:</label>
+                                <label class="form-label" for="tensaov">Tensão:</label>
                                 <input class="form-control" name="tensaov" id="tensaov" placeholder="110 ou 220" cols="15" rows="10" required>
 
                                 <br>
-                                <label class="form-label" for="regulation">Marca:</label>
+                                <label class="form-label" for="marca">Marca:</label>
                                 <input class="form-control" name="marca" id="marca" placeholder="SAMSUNG ou BRASTEMP ou ELECTROLUX ou FISCHER ou LG " cols="15" rows="10" required>
 
                                 <div class="col-12 d-flex justify-content-end pt-3">

@@ -24,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('eletros', function (Blueprint $table) {
             //
+            $table->dropColumn("tensaov");
         });
     }
 };

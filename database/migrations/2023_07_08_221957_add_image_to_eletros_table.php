@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('eletros', function (Blueprint $table) {
             //
-            $table->string("image");
+            $table->string('image');
         });
     }
 
@@ -24,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('eletros', function (Blueprint $table) {
             //
+            $table->dropColumn('image');
         });
     }
 };

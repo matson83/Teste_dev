@@ -26,4 +26,5 @@ Route::prefix('app')->group(function(){
 
     Route::get('/create', [EletroController::class,'create'])->name('create');
     Route::post('/store', [EletroController::class,'store'])->name('store');
+    Route::get('/show/{id}', [EletroController::class,'show'])->name('show');
 });
