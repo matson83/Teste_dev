@@ -26,9 +26,7 @@
 
                 <section class="card border-0 py-1 p-md-2 p-xl-3 p-xxl-4 mb-4">
 
-                        <div class="d-flex align-items-center">
-
-                        </div>
+                    <div class="d-flex align-items-center">
                         <form action="/api/app/store" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3 container">
@@ -42,7 +40,7 @@
                                 <label class="form-label" for="image">Imagem:</label>
                                 <input class="form-control-file" type="file" name="image" id="image">
                                 <br>
-                                
+
 
                                 <br>
                                 <label class="form-label" for="tensaov">Tensão:</label>

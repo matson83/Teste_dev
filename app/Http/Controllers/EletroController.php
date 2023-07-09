@@ -62,6 +62,33 @@ class EletroController extends Controller
 
     }
 
+    public function destroy($id){
+
+        Eletro::findOrFail($id)->delete();
+
+        return redirect('/api');
+
+    }
+
+    public function edit($id){
+
+        $eletro =  Eletro::findOrFail($id);
+
+
+        return view('app.edit' , ['eletro' => $eletro]);
+
+    }
+
+    public function update(Request $request){
+
+        Eletro::findOrFail($request->id)->update($request->all());
+
+
+        return redirect ('/');
+
+    }
+
+
 
 
 }

@@ -29,18 +29,18 @@
 
       <div>
         <ul class="list-group">
-            <li class="list-group-item active">{{$eletro->name}}  #{{$eletro->id}}</li>
-            <li class="list-group-item">{{$eletro->description}}</li>
-            <li class="list-group-item">{{$eletro->marca}}</li>
-            <li class="list-group-item">{{$eletro->image}}</li>
-            <li class="list-group-item">{{$eletro->tensaov}}</li>
+            <li class="list-group-item">Nome do eletrodomésticos : {{$eletro->name}}  #{{$eletro->id}}</li>
+            <li class="list-group-item"> Descrição : {{$eletro->description}}</li>
+            <li class="list-group-item">Marca : {{$eletro->marca}}</li>
+            <li class="list-group-item">Imagem : {{$eletro->image}}</li>
+            <li class="list-group-item">Tensão : {{$eletro->tensaov}}</li>
 
           </ul>
       </div>
 
       <div>
-        <a href="" class="btn btn-primary">Editar</a>
-        <form action="" method="POST">
+        <a href="/api/app/edit/{{$eletro->id}}" class="btn btn-primary">Editar</a>
+        <form action="/api/app/{{ $eletro->id }}" method="POST">
         @csrf
         @method('DELETE')
         <button type="submit" class="btn btn-danger delete-btn">Deletar</button>

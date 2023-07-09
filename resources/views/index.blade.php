@@ -42,11 +42,9 @@
                     <img class="imgEletro" src="/img/eletros/{{$eletro->image}}" alt="{{$eletro->name}}">
                     <div class="card-body">
                         <h4 class="card-name">{{$eletro->name}}</h4>
-                        <h4 class="card-name">{{$eletro->description}}</h4>
-                        <h5 class="card-description">{{$eletro->tensaov}}</h5>
                         <h5 class="card-description">{{$eletro->marca}}</h5>
 
-                        <a href="/api/app/show/{{ $eletro->id}}" class="btn btn-primary bg-dark">Saber Mais</a>
+                        <a href="/api/app/show/{{ $eletro->id}}" class="btn btn-primary bg-dark">Informações</a>
 
                     </div>
                 </div>
