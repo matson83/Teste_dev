@@ -66,7 +66,7 @@ class EletroController extends Controller
 
         Eletro::findOrFail($id)->delete();
 
-        return redirect('/api');
+        return redirect('/');
 
     }
 

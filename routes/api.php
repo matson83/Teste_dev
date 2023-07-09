@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/api', [EletroController::class,'index'])->name('index');
+Route::get('/', [EletroController::class,'index'])->name('index');
 
 Route::prefix('app')->group(function(){
 
